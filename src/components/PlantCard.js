@@ -4,6 +4,7 @@ function PlantCard({ plant }) {
   const [inStock, setInStock] = useState(true)
 
   function toggleInStock() {
+
     setInStock(stock => !stock);
   }
   return (
@@ -14,7 +15,7 @@ function PlantCard({ plant }) {
       {inStock ? (
         <button onClick={toggleInStock} className="primary">In Stock</button>
       ) : (
-        <button onClick={toggleInStock}>Out of Stock</button>
+        <button onClick={toggleInStock} className="secondary">Out of Stock</button>
       )}
     </li>
   );
